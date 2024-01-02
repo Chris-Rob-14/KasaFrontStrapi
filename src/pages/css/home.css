@@ -1,0 +1,21 @@
+.AddLogement{
+    background: #ff6060;
+    margin: 0.8rem 0;
+    width: 20%;
+    padding: 0.8rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    color: white;
+}
+
+.AddLogementButton{
+    height: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}

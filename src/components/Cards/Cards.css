@@ -1,0 +1,111 @@
+.card-container {
+  background: #f7f7f7;
+  border-radius: 25px;
+  padding: 10px;
+  display: flex;
+}
+
+.card-item {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  list-style-type: none;
+  padding-inline-start: unset;
+}
+.house-link {
+  position: relative;
+  height: 16rem;
+  border-radius: 10px;
+}
+
+.house-image {
+  width: 16rem;
+  height: 16rem;
+  border-radius: 10px;
+  filter: brightness(0.7);
+}
+
+.item-title {
+  color: white;
+  width: 13rem;
+  position: relative;
+  top: -5rem;
+  left: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media only screen and (max-width: 1024px) {
+  .house-image {
+    width: 40rem;
+    height: 25rem;
+  }
+  .house-link {
+    height: 25rem;
+  }
+
+  .item-title {
+    width: 13rem;
+    font-size: 1rem;
+    top: -5.5rem;
+  }
+
+  .card-container {
+    margin-left: 2rem!important;
+    width: 78%;
+  }
+
+  .card-item {
+    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .house-image {
+    width: 21rem;
+    height: 15rem;
+  }
+  .house-link {
+    height: 15rem;
+  }
+
+  .item-title {
+    width: 18rem;
+    font-size: 1.4rem;
+    top: -6rem;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .house-image {
+    width: 20rem;
+    height: 16rem;
+  }
+  .house-link {
+    height: 15rem;
+  }
+
+  .item-title {
+    width: 13rem;
+    font-size: 1rem;
+    top: -4.5rem;
+  }
+
+  .card-container {
+    margin-left: 2rem!important;
+    width: 78%;
+  }
+
+  .card-item {
+    gap: 2rem;
+  }
+}

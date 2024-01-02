@@ -1,0 +1,133 @@
+.hero-section-image {
+  width: 90%;
+  height: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 25px;
+  position: relative;
+  filter: brightness(0.7);
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+  z-index: 9999;
+  position: absolute;
+  font-family: "Montserrat", sans-serif;
+}
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.letter-404 {
+  font-size: 18rem;
+  color: #ff6060;
+}
+
+.message-404 {
+  font-size: 1rem;
+  font-weight: 500px;
+  color: #ff6060;
+}
+
+.link-back-to-home {
+  margin-top: 5rem;
+  font-size: 1rem;
+  color: #ff6060;
+}
+
+.return__button {
+  background-color: #ff6060;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1200px) {
+  .hero-section-about {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .hero-section-about {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .hero-section-about {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  .letter-404 {
+    font-size: 10rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  h1 {
+    font-size: 1rem;
+  }
+  .error-container {
+    margin: 0% 15%;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  h1 {
+    font-size: 1rem;
+  }
+  .error-container {
+    margin: 0% 15%;
+    text-align: center;
+  }
+
+  .hero-section-image {
+    width: 90%;
+    height: 111px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 25px;
+    position: relative;
+    filter: brightness(0.7);
+  }
+}
+@media only screen and (max-width: 356px) {
+  .letter-404 {
+    font-size: 7rem;
+  }
+
+  .message-404 {
+    font-size: 0.8rem;
+  }
+
+  .link-back-to-home {
+    font-size: 0.8rem;
+  }
+}

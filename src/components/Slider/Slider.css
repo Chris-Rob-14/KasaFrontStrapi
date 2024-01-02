@@ -1,0 +1,151 @@
+.sliders {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  border-radius: 25px;
+  position: relative;
+}
+
+.slide-active {
+  width: 99%;
+  height: 415px;
+  border-radius: 25px;
+  object-fit: cover;
+  position: relative;
+  left: 60px;
+}
+
+.slide-image {
+  width: 91%;
+  height: 415px;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 40%;
+  left: 2rem;
+  font-size: 5rem;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 40%;
+  right: 2rem;
+  font-size: 5rem;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.slider-counter {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+.btn-hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .left-arrow {
+    position: absolute;
+    top: 40%;
+    left: 1.5rem;
+    width: 35px;
+    color: white;
+    cursor: pointer;
+    background: none;
+  border: none;
+  }
+  
+  .right-arrow {
+    position: absolute;
+    top: 40%;
+    right: 1.5rem;
+    width: 35px;
+    color: white;
+    cursor: pointer;
+    background: none;
+  border: none;
+  }
+  .slide-image {
+    width: 90%;
+    height: 255px;
+    border-radius: 25px;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .left-arrow {
+    position: absolute;
+    top: 40%;
+    left: 1.3rem;
+    width: 25px;
+    color: white;
+    cursor: pointer;
+    background: none;
+  border: none;
+  }
+  
+  .right-arrow {
+    position: absolute;
+    top: 40%;
+    right: 1.3rem;
+    width: 25px;
+    color: white;
+    cursor: pointer;
+    background: none;
+  border: none;
+  }
+  .slide-image {
+    width: 90%;
+    height: 255px;
+    border-radius: 25px;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .left-arrow {
+    position: absolute;
+    top: 40%;
+    left: 1rem;
+    width: 25px;
+    color: white;
+    cursor: pointer;
+    background: none;
+  border: none;
+  }
+  
+  .right-arrow {
+    position: absolute;
+    top: 40%;
+    right: 1rem;
+    width: 25px;
+    color: white;
+    cursor: pointer;
+    background: none;
+  border: none;
+  }
+
+  .slide-image {
+    width: 90%;
+    height: 255px;
+    border-radius: 25px;
+    object-fit: cover;
+  }
+}

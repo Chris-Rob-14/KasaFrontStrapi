@@ -1,0 +1,165 @@
+.house-infos-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 6rem;
+}
+
+.house-details-container {
+  display: flex;
+  margin: 0 17% !important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.house-infos-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.house-title {
+  color: #ff6060;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.house-location {
+  font-size: 1rem;
+  color: #ff6060;
+  font-family: "Montserrat", sans-serif;
+}
+
+.house-tags {
+  color: white;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.tag {
+  background: #ff6060;
+  margin: 0.8rem 0;
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media only screen and (min-width: 1026px) {
+.house-host-rating {
+  display: flex;
+  flex-direction: column;
+}
+}
+
+.host-infos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.host-rating {
+  margin: 1rem 0;
+}
+
+.host-profil {
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+}
+
+.host-name {
+  width: 93px;
+  width: 52px;
+  font-size: 18px;
+  color: #ff6060;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+
+@media only screen and (max-width: 1155px) {
+  .house-infos-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .house-infos-details {
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+  .house-tags {
+    justify-content: center;
+    align-items: center;
+  }
+  .house-title {
+    text-align: center;
+  }
+}
+
+
+@media only screen and (max-width: 1025px) {
+  .host-rating {
+    position: absolute;
+    left: 17.33%;
+    top: 89%;
+  }
+  
+  .host-infos-container{
+    position: relative;
+    left: 170%;
+    margin-bottom: 1rem;
+  }
+  }
+
+@media only screen and (max-width: 735px) {
+  .house-tags {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .host-rating {
+    position: relative;
+    left: -110px;
+    top: -60px;
+  }
+
+  .house-tags {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+  
+  .host-infos-container{
+    position: relative;
+    left: 58%;
+    margin-bottom: 1rem;
+  }
+
+  .house-host-rating {
+    height: 80px;
+  }
+  }
+
+@media only screen and (max-width: 370px) {
+  .host-rating {
+    position: relative;
+    left: -90px;
+    top: -60px;
+}
+.house-host-rating {
+    height: 80px;
+  }
+  }
+
+  .house-tags {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+
+  
