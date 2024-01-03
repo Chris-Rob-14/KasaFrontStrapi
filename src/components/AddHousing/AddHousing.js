@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "../Modal/Modal.css";
 
 function AddHousingForm() {
   const [housingData, setHousingData] = useState({
@@ -74,7 +75,7 @@ function AddHousingForm() {
   
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className = "form" onSubmit={handleSubmit}>
       <input
         type="text"
         name="title"

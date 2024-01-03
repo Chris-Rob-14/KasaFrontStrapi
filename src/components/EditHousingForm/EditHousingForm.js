@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import "../Modal/Modal.css";
 
 function EditHousingForm({ housingId }) {
   const [housingData, setHousingData] = useState({
@@ -24,6 +25,7 @@ useEffect(() => {
     }
   };
 
+  
   fetchHousingData();
 }, [housingId]);
 
@@ -60,7 +62,7 @@ useEffect(() => {
 
     try {
       const response = await fetch(`http://localhost:1337/api/housings/${housingId}`, {
-        method: 'PUT',
+        method: 'PATCH',
         body: formData,
       });
       if (!response.ok) throw new Error('Network response was not ok');
@@ -73,7 +75,7 @@ useEffect(() => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className = "form" onSubmit={handleSubmit}>
       <input
         type="text"
         name="title"
@@ -123,7 +125,7 @@ useEffect(() => {
       <input
         type="text"
         name="host"
-        value={housingData.host}
+        value="13"
         onChange={handleChange}
         placeholder="Hote"
       />

@@ -1,0 +1,73 @@
+/* Style de base pour le contenu de la modale */
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour les inputs de texte à l'intérieur de la modale */
+.modal-content .form-container input[type="text"],
+.modal-content .form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style pour la zone de texte à l'intérieur de la modale */
+.modal-content .form-container textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+/* Style pour le bouton de soumission à l'intérieur de la modale */
+.modal-content .form-container button {
+  width: 100%; /* Assurez-vous que le bouton s'étend sur toute la largeur */
+  padding: 10px;
+  background: #ff6060;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Effet de survol pour le bouton à l'intérieur de la modale */
+.modal-content .form-container button:hover {
+  background: #e55050;
+}
+
+/* Style pour les inputs de fichier à l'intérieur de la modale */
+.modal-content .form-container input[type="file"] {
+  border: 1px solid #ccc;
+  display: block;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+/* Style pour les étiquettes / tags à l'intérieur de la modale */
+.modal-content .form-container .tag {
+  background: #ff6060;
+  color: white;
+  border-radius: 20px;
+  padding: 0.25rem 0.75rem;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  font-size: 0.875rem;
+}
+
+/* Custom styles for the accordion headers if needed */
+.modal-content .form-container .accordion-header {
+  background: #ff6060;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+/* Vous pouvez ajouter plus de styles personnalisés pour d'autres éléments si nécessaire */

@@ -15,13 +15,13 @@ function House() {
 
   useEffect(() => {
     fetch(`http://localhost:1337/api/housings/${id}?populate=*`)
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         setHouse(data.data);
         setIsLoading(false);
       })
-      .catch(error => {
-        console.error('Error fetching data: ', error);
+      .catch((error) => {
+        console.error("Error fetching data: ", error);
         setIsLoading(false);
       });
   }, [id]);
@@ -31,16 +31,22 @@ function House() {
   };
 
   const handleDelete = async () => {
-    const confirmation = window.confirm("Êtes-vous sûr de vouloir supprimer ce logement ?");
+    const confirmation = window.confirm(
+      "Êtes-vous sûr de vouloir supprimer ce logement ?"
+    );
     if (confirmation) {
       try {
-        const response = await fetch(`http://localhost:1337/api/housings/${id}`, {
-          method: 'DELETE',
-        });
-        if (!response.ok) throw new Error('Problème lors de la suppression du logement');
-        navigate('/'); // Redirigez l'utilisateur vers la page d'accueil ou une autre page appropriée
+        const response = await fetch(
+          `http://localhost:1337/api/housings/${id}`,
+          {
+            method: "DELETE",
+          }
+        );
+        if (!response.ok)
+          throw new Error("Problème lors de la suppression du logement");
+        navigate("/"); // Redirigez l'utilisateur vers la page d'accueil ou une autre page appropriée
       } catch (error) {
-        console.error('Erreur lors de la suppression :', error);
+        console.error("Erreur lors de la suppression :", error);
       }
     }
   };
@@ -54,10 +60,12 @@ function House() {
   }
 
   const coverImageUrl = house.attributes.cover.data.attributes.url;
-  const picturesUrls = house.attributes.pictures.data.map(p => p.attributes.url);
+  const picturesUrls = house.attributes.pictures.data.map(
+    (p) => p.attributes.url
+  );
 
-  const sliderImages = [coverImageUrl, ...picturesUrls].map(url => ({
-    original: `http://localhost:1337${url}`
+  const sliderImages = [coverImageUrl, ...picturesUrls].map((url) => ({
+    original: `http://localhost:1337${url}`,
   }));
 
   return (
@@ -65,26 +73,38 @@ function House() {
       <Slider pictures={sliderImages} />
       <HouseDetails {...house.attributes} />
       <div className="accordion-container">
-        <Accordion title="Description">{house.attributes.description}</Accordion>
+        <Accordion title="Description">
+          {house.attributes.description}
+        </Accordion>
         <Accordion title="Equipements">
-        {house.attributes.equipments && typeof house.attributes.equipments === 'string' ? (
-          house.attributes.equipments.split(',').map((equipment, index) => (
-            <div key={index}>{equipment.trim()}</div>
-          ))
-        ) : (
-          <div>Pas d'équipements à afficher</div>
-        )}
-      </Accordion>
+          {house.attributes.equipments &&
+          typeof house.attributes.equipments === "string" ? (
+            house.attributes.equipments
+              .split(",")
+              .map((equipment, index) => (
+                <div key={index}>{equipment.trim()}</div>
+              ))
+          ) : (
+            <div>Pas d'équipements à afficher</div>
+          )}
+        </Accordion>
       </div>
-
-      {/* Boutons Modifier et Supprimer */}
-      <button onClick={handleEdit}>Modifier le logement</button>
-      <button onClick={handleDelete}>Supprimer le logement</button>
-
+      <div className="LogementButton">
+        {/* Boutons Modifier et Supprimer */}
+        <button className="AddLogement" onClick={handleEdit}>
+          Modifier le logement
+        </button>
+        <button className="AddLogement" onClick={handleDelete}>
+          Supprimer le logement
+        </button>
+      </div>
       {/* Modal pour la modification */}
       {isEditModalOpen && (
-        <Modal isOpen={isEditModalOpen} onClose={() => setIsEditModalOpen(false)}>
-          <EditHousingForm houseData={house} />
+        <Modal
+          isOpen={isEditModalOpen}
+          onClose={() => setIsEditModalOpen(false)}
+        >
+          <EditHousingForm housingId={id} />
         </Modal>
       )}
 
